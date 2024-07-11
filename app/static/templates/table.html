@@ -1,0 +1,25 @@
+<table id="users-table">
+    <thead>
+        <tr>
+            <th>Имя</th>
+            <th>Фамилия</th>
+            <th>Почта</th>
+            <th>Действие</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for user in users %}
+        <tr id="id_{{ user.id }}">
+            <td>{{ user.first_name }}</td>
+            <td>{{ user.last_name }}</td>
+            <td>{{ user.email }}</td>
+            <td>
+                <button class="btn" hx-delete="delete-user/{{ user.id }}" hx-target="#users-table"
+                    hx-confirm="Вы уверены?">Удалить</button>
+                <button class="btn" hx-get="edit_row/{{ user.id }}" hx-target="#id_{{ user.id }}"
+                    hx-swap="outerHTML">Обновить</button>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>

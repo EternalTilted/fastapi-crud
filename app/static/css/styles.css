@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+thead {
+    background-color: rgb(130, 165, 230);
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table,
+td,
+th {
+    border: 1px solid #ddd;
+}
+
+th,
+td {
+    padding: 10px;
+}
+
+h1 {
+    color: #363636;
+}
+
+
+.btn {
+    border-radius: 6px;
+    color: black;
+}
+
+.btn:hover {
+    background-color: #ffffff;
+    transform: scale(1.05);
+}
+
+.btn:active {
+    background-color: #8ba8d2;
+}

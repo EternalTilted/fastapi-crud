@@ -1,0 +1,17 @@
+<tr id="id_{{ user.id }}">
+
+    <td>
+        <form id="form1" hx-post="/confirm-update/{{ user.id }}" hx-target="#users-table">
+            <input type="text" name="first_name" value="{{ user.first_name }}">
+        </form>
+    </td>
+    <td>
+        <input form="form1" type="text" name="last_name" value="{{ user.last_name }}">
+    </td>
+    <td>
+        <input form="form1" type="text" name="email" value="{{ user.email }}">
+    </td>
+    <td>
+        <button form="form1" class="btn">Подтвердить</button>
+    </td>
+</tr>
